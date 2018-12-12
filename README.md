@@ -126,3 +126,5 @@ Change rules values on the decision tables, deploy the project and order another
 ![Image of Decision Table](https://github.com/kmacedovarela/jbpm-demo-pizzapizza/blob/master/images/price-rules.png)
 
 When implementing business proccesses and rules using proper technologies and methodologies, business requirements can be quickly achieved with little effort from dev and ops teams. It always important to remember that all kpis are being stored to be presented on a friendly dashboard for business users. 
+
+Some more info on: this [talk slides](https://redhat.slides.com/kvarela/processdrivenapps-5?token=9XnvJMkY)
