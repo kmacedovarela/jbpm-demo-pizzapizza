@@ -21,7 +21,12 @@ To test this project its necessary to start jBPM, import projects, create its re
 
 1. Download jBPM 7.15 full installer of [jBPM 7.15](https://download.jboss.org/jbpm/release/7.15.0.Final/jbpm-installer-full-7.15.0.Final.zip)
 1. Start jBPM with the following command
-   1. `$PATH_TO/jbpm-server-7.14.0.Final/bin/standalone.sh -Dorg.kie.server.xstream.enabled.packages='org.kvarela**` 
+
+~~~
+
+$PATH_TO/jbpm-server-7.14.0.Final/bin/standalone.sh -Dorg.kie.server.xstream.enabled.packages='org.kvarela**
+
+~~~
 
 ## Importing processes and rules 
 
