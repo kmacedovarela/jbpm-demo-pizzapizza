@@ -1,0 +1,9 @@
+[submodule "jbpm-processes-pizzapizza"]
+	path = jbpm-processes-pizzapizza
+	url = git@github.com:kmacedovarela/jbpm-processes-pizzapizza.git
+[submodule "jbpm-rules-pizzapizza"]
+	path = jbpm-rules-pizzapizza
+	url = git@github.com:kmacedovarela/jbpm-rules-pizzapizza.git
+[submodule "pizzapizza-application-model"]
+	path = pizzapizza-application-model
+	url = git@github.com:kmacedovarela/pizzapizza-application-model.git
