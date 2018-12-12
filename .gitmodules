@@ -7,3 +7,6 @@
 [submodule "pizzapizza-application-model"]
 	path = pizzapizza-application-model
 	url = git@github.com:kmacedovarela/pizzapizza-application-model.git
+[submodule "dialogflow-nodejs-pizzapizza"]
+	path = dialogflow-nodejs-pizzapizza
+	url = git@github.com:kmacedovarela/dialogflow-nodejs-pizzapizza.git
