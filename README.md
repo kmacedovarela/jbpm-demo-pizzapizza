@@ -11,11 +11,14 @@ The whole project was authored on business central and developed using dialogflo
 
 The bpmn process uses a `Remote Business Rule Task`, this means the [process project](https://github.com/kmacedovarela/pizzapizza-demo/tree/master/jbpm-processes-pizzapizza) is deployed independently from the [rules project](https://github.com/kmacedovarela/pizzapizza-demo/tree/master/jbpm-rules-pizzapizza), what makes changes and promotion of rule deployments easier and independent from process lifecycle facilitating business changes. Both projects relies on the same [model](https://github.com/kmacedovarela/pizzapizza-application-model), Order.java. 
 
-## Installation
+## Download projects code (not required)
 
-To pull all projects code to a local machine:
+If you want to download code, an pull all projects code to a local machine:
 
+`git clone https://github.com/kmacedovarela/jbpm-demo-pizzapizza.git `
 `git submodule update --init --recursive`
+
+## Installation
 
 To test this project its necessary to start jBPM, import projects, create its respective two kie containers and import the google assistant project to dialogflow. 
 
