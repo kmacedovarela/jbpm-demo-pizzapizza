@@ -13,6 +13,10 @@ The bpmn process uses a `Remote Business Rule Task`, this means the [process pro
 
 ## Installation
 
+To pull all projects code to a local machine:
+
+`git submodule update --init --recursive`
+
 To test this project its necessary to start jBPM, import projects, create its respective two kie containers and import the google assistant project to dialogflow. 
 
 *For now, this file describes a local install without docker*
