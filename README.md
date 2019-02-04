@@ -15,8 +15,20 @@ The bpmn process uses a `Remote Business Rule Task`, this means the [process pro
 
 If you want to download code, an pull all projects code to a local machine:
 
-`git clone https://github.com/kmacedovarela/jbpm-demo-pizzapizza.git `
-`git submodule update --init --recursive`
+````
+○ →  git clone --recursive git@github.com:kmacedovarela/jbpm-demo-pizzapizza.git
+Cloning into 'jbpm-demo-pizzapizza'...
+remote: Enumerating objects: 37, done.
+remote: Counting objects: 100% (37/37), done.
+remote: Compressing objects: 100% (30/30), done.
+remote: Total 37 (delta 14), reused 21 (delta 5), pack-reused 0
+Receiving objects: 100% (37/37), 319.15 KiB | 783.00 KiB/s, done.
+Resolving deltas: 100% (14/14), done.
+Submodule 'dialogflow-nodejs-pizzapizza' (git@github.com:kmacedovarela/dialogflow-nodejs-pizzapizza.git) registered for path 'dialogflow-nodejs-pizzapizza'
+Submodule 'jbpm-processes-pizzapizza' (git@github.com:kmacedovarela/jbpm-processes-pizzapizza.git) registered for path 'jbpm-processes-pizzapizza'
+Submodule 'jbpm-rules-pizzapizza' (git@github.com:kmacedovarela/jbpm-rules-pizzapizza.git) registered for path 'jbpm-rules-pizzapizza'
+Submodule 'pizzapizza-application-model' (git@github.com:kmacedovarela/pizzapizza-application-model.git) registered for path 'pizzapizza-application-model'
+```` 
 
 ## Installation
 
