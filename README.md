@@ -38,18 +38,18 @@ To test this project its necessary to start jBPM, import projects, create its re
 
 ### jBPM 
 
-1. Download jBPM 7.15 full installer of [jBPM 7.15](https://download.jboss.org/jbpm/release/7.15.0.Final/jbpm-installer-full-7.15.0.Final.zip)
+1. Download jBPM 7.23 full installer of [jBPM 7.23](https://download.jboss.org/jbpm/release/7.23.0.Final/jbpm-installer-full-7.23.0.Final.zip)
 1. Start jBPM with the following command
 
 ~~~
 
-$PATH_TO/jbpm-server-7.14.0.Final/bin/standalone.sh -Dorg.kie.server.xstream.enabled.packages='org.kvarela**
+$PATH_TO/jbpm-server-7.23.0.Final/bin/standalone.sh -Dorg.kie.server.xstream.enabled.packages='org.kvarela**
 
 ~~~
 
 ## Importing processes and rules 
 
-After your jBPM is up and running you can import the project via jbpm-console or via rest API. 
+After your jBPM is up and running you can import the project via business-central or via rest API. 
 
 For the sake of this demo, here are the curl commands to import and built the three projects:
 
@@ -61,11 +61,11 @@ For the sake of this demo, here are the curl commands to import and built the th
 
 ~~~
 
-curl --request GET  --header 'Authorization: Basic c2FsYWJveTpzYWxhYm95'  --url http://localhost:8080/jbpm-console/rest/spaces/MySpace/projects
+curl --request GET  --header 'Authorization: Basic c2FsYWJveTpzYWxhYm95'  --url http://localhost:8080/business-central/rest/spaces/MySpace/projects
 
-curl --request POST --url http://localhost:8080/jbpm-console/rest/spaces/MySpace/git/clone --header 'Authorization: Basic c2FsYWJveTpzYWxhYm95' --header 'Content-Type: application/json' --header 'cache-control: no-cache' --data '{"name":"pizzapizza-application-model","description":"Pizza Pizza - Model project.","gitURL":"git@github.com:kmacedovarela/pizzapizza-application-model.git"}'
+curl --request POST --url http://localhost:8080/business-central/rest/spaces/MySpace/git/clone --header 'Authorization: Basic c2FsYWJveTpzYWxhYm95' --header 'Content-Type: application/json' --header 'cache-control: no-cache' --data '{"name":"pizzapizza-application-model","description":"Pizza Pizza - Model project.","gitURL":"git@github.com:kmacedovarela/pizzapizza-application-model.git"}'
 
-curl --request POST   --url http://localhost:8080/jbpm-console/rest/spaces/MySpace/projects/pizzapizza-application-model/maven/install  --header 'Authorization: Basic c2FsYWJveTpzYWxhYm95'
+curl --request POST   --url http://localhost:8080/business-central/rest/spaces/MySpace/projects/pizzapizza-application-model/maven/install  --header 'Authorization: Basic c2FsYWJveTpzYWxhYm95'
 
 ~~~
 
@@ -73,10 +73,10 @@ curl --request POST   --url http://localhost:8080/jbpm-console/rest/spaces/MySpa
 
 ~~~
 
-curl --request POST --url http://localhost:8080/jbpm-console/rest/spaces/MySpace/git/clone --header 'Authorization: Basic c2FsYWJveTpzYWxhYm95' --header 'Content-Type: application/json' --header 'cache-control: no-cache' --data '{"name":"jbpm-rules-pizzapizza","description":"Pizza Pizza JBPM Demo - Rules project.","gitURL":"git@github.com:kmacedovarela/jbpm-rules-pizzapizza.git"}'
+curl --request POST --url http://localhost:8080/business-central/rest/spaces/MySpace/git/clone --header 'Authorization: Basic c2FsYWJveTpzYWxhYm95' --header 'Content-Type: application/json' --header 'cache-control: no-cache' --data '{"name":"jbpm-rules-pizzapizza","description":"Pizza Pizza JBPM Demo - Rules project.","gitURL":"git@github.com:kmacedovarela/jbpm-rules-pizzapizza.git"}'
 
 
-curl --request POST   --url http://localhost:8080/jbpm-console/rest/spaces/MySpace/projects/jbpm-rules-pizzapizza/maven/install  --header 'Authorization: Basic c2FsYWJveTpzYWxhYm95'
+curl --request POST   --url http://localhost:8080/business-central/rest/spaces/MySpace/projects/jbpm-rules-pizzapizza/maven/install  --header 'Authorization: Basic c2FsYWJveTpzYWxhYm95'
 
 ~~~
 
@@ -84,15 +84,15 @@ curl --request POST   --url http://localhost:8080/jbpm-console/rest/spaces/MySpa
 
 ~~~
 
-curl --request POST   --url http://localhost:8080/jbpm-console/rest/spaces/MySpace/git/clone   --header 'Authorization: Basic c2FsYWJveTpzYWxhYm95' --header 'Content-Type: application/json' --header 'cache-control: no-cache' --data '{"name":"pizzapizza-processes-kjar","description":"Pizza Pizza JBPM Demo - Process project.","gitURL":"git@github.com:kmacedovarela/jbpm-processes-pizzapizza.git"}'
+curl --request POST   --url http://localhost:8080/business-central/rest/spaces/MySpace/git/clone   --header 'Authorization: Basic c2FsYWJveTpzYWxhYm95' --header 'Content-Type: application/json' --header 'cache-control: no-cache' --data '{"name":"pizzapizza-processes-kjar","description":"Pizza Pizza JBPM Demo - Process project.","gitURL":"git@github.com:kmacedovarela/jbpm-processes-pizzapizza.git"}'
 
-curl --request POST   --url http://localhost:8080/jbpm-console/rest/spaces/MySpace/projects/jbpm-processes-pizzapizza/maven/install  --header 'Authorization: Basic c2FsYWJveTpzYWxhYm95'
+curl --request POST   --url http://localhost:8080/business-central/rest/spaces/MySpace/projects/jbpm-processes-pizzapizza/maven/install  --header 'Authorization: Basic c2FsYWJveTpzYWxhYm95'
 
 ~~~
 
 ## Deploying kie containers
 
-1. Access your jbpm-console console (Ex. http://localhost:8080/jbpm-console) and check that the three projects were imported as expected. 
+1. Access your business-central console (Ex. http://localhost:8080/business-central) and check that the three projects were imported as expected. 
 
 1. Open the `pizzapizza-rules-kjar` project, and click on deploy. jBPM will build and deploy the project on Kie Server. A new kie container will be created to process the rules in this project;
 
